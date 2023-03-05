@@ -1,0 +1,32 @@
+root:
+  parts: # We dropped the SEQUENCE information from the excel sheet
+   name: string
+   role: enum
+   circular: boolean # isn't this implicit from role ?
+   partDescription: string
+   application: 
+    applicationNotes: string # formerly "Design Notes"
+    targetOrganism: string
+    finalProduct: string # Should we keep this? Where should we keep this?
+    characterization: # unsure what this should look like
+      tba1: string
+      tba2: string
+      tba4: string
+      tba3: string
+   sourceInfo:
+    dataSource: enum
+    dataSourceID: string
+    sourceOrganism: string
+  libraries: # Eugene Rules ?
+    name: string
+    designNotes: string # This is too vague
+    description: string
+    finalProduct: boolean
+    backbone: string
+  composites: # Should this be separate from libraries?
+  metadata:
+    reference: string
+    name: string
+    description: string
+    version: string
+    date: string

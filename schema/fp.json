@@ -99,8 +99,7 @@
                     "validationWarning": "Part name is invalid",
                     "missingValueWarning": "Part name is required"
                 }
-            },
-            
+            }
         }
     }
 }

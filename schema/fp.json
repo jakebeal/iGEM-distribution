@@ -1,0 +1,105 @@
+{
+    "parts": {
+        "id": "UUID",
+        "fields": {
+            "partName": {
+                "type": {
+                    "type": "String",
+                    "valid": ".*" // Regex Pattern
+                },
+                "required": true,
+                "sourcePoints": "A1",
+                "qualityPoints": [ 
+                    // These would be quality points we can add 
+                    // for different criteria (some could later 
+                    // be qualitative and some could be otherwise)
+                    {
+                        "quality": "A",
+                        "points": 10
+                    },
+                    {
+                        "quality": "B",
+                        "points": 5
+                    },
+                    {
+                        "quality": "C",
+                        "points": 0
+                    }
+                ],
+                "errors": { // These are the errors that would be thrown
+                    "validationError": "Part name is invalid",
+                    "missingValueError": "Part name is required"
+                },
+                "warnings": { // These are the warnings that would be thrown
+                    "validationWarning": "Part name is invalid",
+                    "missingValueWarning": "Part name is required"
+                }
+            },
+            "role": {
+                "type": {
+                    "type": "Enum",
+                    "valid": [
+                        "CDS",
+                        "plasmid_vector",
+                        "designed_sequence",
+                        "other"
+                    ]
+                },
+                "required": true,
+                "sourcePoints": "A1",
+                "qualityPoints": [
+                    {
+                        "quality": "A",
+                        "points": 10
+                    },
+                    {
+                        "quality": "B",
+                        "points": 5
+                    },
+                    {
+                        "quality": "C",
+                        "points": 0
+                    }
+                ],
+                "errors": {
+                    "validationError": "Part name is invalid",
+                    "missingValueError": "Part name is required"
+                },
+                "warnings": {
+                    "validationWarning": "Part name is invalid",
+                    "missingValueWarning": "Part name is required"
+                }
+            },
+            "designNotes": {
+                "type": {
+                    "type": "String",
+                    "valid": ".*"
+                },
+                "required": false,
+                "sourcePoints": "A1",
+                "qualityPoints": [
+                    {
+                        "quality": "A",
+                        "points": 10
+                    },
+                    {
+                        "quality": "B",
+                        "points": 5
+                    },
+                    {
+                        "quality": "C",
+                        "points": 0
+                    }
+                ],
+                "errors": {
+                    "validationError": "Part name is invalid",
+                    "missingValueError": "Part name is required"
+                },
+                "warnings": {
+                    "validationWarning": "Part name is invalid",
+                    "missingValueWarning": "Part name is required"
+                }
+            }
+        }
+    }
+}
